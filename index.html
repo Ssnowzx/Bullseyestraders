@@ -49,6 +49,14 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
             transform: translateY(-5px);
         }
+        .text-container {
+            background-color: rgba(0, 0, 0, 0.1); /* Caixa preta com 10% de opacidade */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito visual */
+            margin: 20px 0; /* Espaçamento em cima e em baixo */
+            max-width: 600px; /* Largura máxima da caixa */
+        }
         .price-container {
             background-color: rgba(0, 0, 0, 0.1); /* Caixa preta com 90% de opacidade */
             padding: 20px;
@@ -59,21 +67,29 @@
             font-size: 2em;
             color: white; /* Texto branco sobre fundo escuro */
         }
+        .spacer {
+            margin-bottom: 40px; /* Espaço em branco após a caixa do preço do BTC */
+        }
     </style>
 </head>
 <body>
 
-    <img src="logo.jpeg" alt="Bullseyestraders Logo" class="logo"> <!-- Caminho da logo atualizado -->
+    <img src="logo.jpeg" alt="Bullseyestraders Logo" class="logo">
     <h1>Bem-vindo ao Bullseyestraders</h1>
-    <p>
-        Sua oportunidade de investir com confiança no mercado de criptomoedas chegou! Na Bullseyestraders, somos especialistas em trading que oferecem serviços de gestão profissional para maximizar seus resultados. Utilizamos ferramentas atualizadas e as mais eficazes técnicas de análise para garantir que você esteja sempre à frente no mercado.
-    </p>
-    <br><br>
+
+    <div class="text-container">
+        <p>
+            Sua oportunidade de investir com confiança no mercado de criptomoedas chegou! Na Bullseyestraders, somos especialistas em trading que oferecem serviços de gestão profissional para maximizar seus resultados. Utilizamos ferramentas atualizadas e as mais eficazes técnicas de análise para garantir que você esteja sempre à frente no mercado.
+        </p>
+    </div>
+
     <a href="https://wa.me/5549999383765" class="btn">Fale Conosco</a> 
 
     <div class="price-container">
         Preço do BTC: <span id="btcPrice">Carregando...</span>
     </div>
+
+    <div class="spacer"></div> <!-- Espaço em branco após a caixa de preço do BTC -->
 
     <script>
         let previousPrice = null; // Armazenar o preço anterior
